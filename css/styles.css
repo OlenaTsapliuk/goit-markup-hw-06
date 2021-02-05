@@ -285,13 +285,27 @@ ul {
   transition: transform var(--time) var(--animation-function);
 }
 .modal-close {
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   margin-top: 8px;
   margin-right: 8px;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-white-color);
+  justify-content: center;
+  align-items: center;
+}
+/* Форма модального окна */
+.form-modal {
+  padding: 40px;
+}
+.modal-button {
+  padding: 10px 55.5px;
 }
 /* Особенности */
 .features {
@@ -549,7 +563,8 @@ ul {
 }
 /* Кнопка на главной странице */
 .buttons,
-.button-mailing {
+.button-mailing,
+.modal-button {
   border-radius: 4px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);

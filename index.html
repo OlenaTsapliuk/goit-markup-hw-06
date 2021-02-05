@@ -66,12 +66,37 @@
             <div class="backdrop is-hidden" data-modal>
               <div class="modal-window">
                 <button class="modal-close" data-modal-close>
-                  <svg width="11" height="11">
+                  <svg width="11" height="11" class="close-icon">
                     <use href="./images/sprite.svg#icon-close-1"></use>
                   </svg>
                 </button>
-                <form name="form-modal">
+                <form name="form-modal" class="form-modal">
                   <b>Оставьте свои данные, мы вам перезвоним</b>
+                  <div class="form-field">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="form-field">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel" />
+                  </div>
+                  <div class="form-field">
+                    <label for="email">Почта</label>
+                    <input type="email" name="email" id="email" />
+                  </div>
+                  <label for="coment">Комментарий</label>
+                  <textarea
+                    name="coment"
+                    id="coment"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                  <input type="checkbox" name="consent" id="consent" />
+                  <label for="consent"
+                    >Соглашаюсь с рассылкой и принимаю
+                    <a href=""> Условия договора</a></label
+                  >
+                  <button type="submit" class="modal-button">Отправить</button>
                 </form>
               </div>
             </div>
