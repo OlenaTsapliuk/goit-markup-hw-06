@@ -256,8 +256,8 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  width: 1600px;
-  height: 1024px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--time) var(--animation-function);
@@ -291,6 +291,7 @@ ul {
   cursor: pointer;
   margin-top: 8px;
   margin-right: 8px;
+  border-radius: 50%;
 }
 /* Особенности */
 .features {
@@ -346,7 +347,7 @@ ul {
   margin-right: 30px;
 }
 /* Спозиционирован текст */
-.posters .item {
+.posters-block {
   position: relative;
 }
 .posters-description {
@@ -547,9 +548,9 @@ ul {
   fill: var(--primary-white-color);
 }
 /* Кнопка на главной странице */
-.buttons {
+.buttons,
+.button-mailing {
   border-radius: 4px;
-  padding: 10px 32px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-family: Roboto;
@@ -564,6 +565,9 @@ ul {
 
   transition: color var(--time) var(--animation-function),
     background-color var(--time) var(--animation-function);
+}
+.buttons {
+  padding: 10px 32px;
 }
 .heroy .buttons {
   display: flex;
@@ -684,6 +688,34 @@ ul {
 }
 .portfolio-description {
   padding: 20px 24px;
+}
+/* Форма рассылки */
+.form-send {
+  margin-left: 93px;
+}
+.form-field {
+  display: flex;
+}
+.button-mailing {
+  display: flex;
+  padding: 10px 29px;
+
+  align-items: center;
+  justify-content: center;
+}
+.mailing-input {
+  margin-right: 10px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.button-mailing::after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon-send.svg);
 }
 
 /* .portfolio-menu .item {
