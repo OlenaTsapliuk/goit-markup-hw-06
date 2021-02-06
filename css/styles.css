@@ -328,6 +328,15 @@ ul {
   border-radius: 4px;
   margin-bottom: 28px;
 }
+.form-input {
+  position: relative;
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 14.5px;
+  transform: translateY(-50%);
+}
 .form-label,
 .coment-label {
   position: absolute;
