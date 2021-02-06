@@ -307,6 +307,77 @@ ul {
 .modal-button {
   padding: 10px 55.5px;
 }
+.modal-caption {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  display: block;
+  margin-bottom: 30px;
+}
+.form-modal .form-group {
+  position: relative;
+}
+.form-input,
+.coment-field {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 28px;
+}
+.form-label,
+.coment-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-20px);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+}
+.form-input:focus + .form-label {
+  color: var(--accent-color);
+}
+.form-coment {
+  position: relative;
+}
+.coment-field {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.coment-field::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-checkbox {
+  margin-bottom: 30px;
+}
+.label-checkbox {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.link-consent {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  color: var(--accent-color);
+}
+.modal-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Особенности */
 .features {
   display: flex;
@@ -708,8 +779,9 @@ ul {
 .form-send {
   margin-left: 93px;
 }
-.form-field {
+.form-send .form-field {
   display: flex;
+  position: relative;
 }
 .button-mailing {
   display: flex;
@@ -723,7 +795,20 @@ ul {
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  background-color: transparent;
 }
+.mailing-label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .button-mailing::after {
   content: "";
   margin-left: 10px;
