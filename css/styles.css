@@ -355,12 +355,12 @@ ul {
 }
 .form-coment {
   position: relative;
+  margin-bottom: 20px;
 }
 .coment-field {
   height: 120px;
   resize: none;
   padding: 12px 16px;
-  margin-bottom: 20px;
 }
 .coment-field::placeholder {
   font-weight: normal;
