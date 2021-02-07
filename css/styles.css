@@ -299,6 +299,11 @@ ul {
   background-color: var(--primary-white-color);
   justify-content: center;
   align-items: center;
+  transition: fill var(--time) var(--animation-function);
+}
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--accent-color);
 }
 /* Форма модального окна */
 .form-modal {
@@ -332,12 +337,23 @@ ul {
 }
 .form-input {
   position: relative;
+  padding-left: 42px;
+  transition: border var(--time) var(--animation-function);
+}
+
+.form-input:focus,
+.coment-field:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
 }
 .form-icon {
   position: absolute;
   top: 50%;
   left: 14.5px;
   transform: translateY(-50%);
+}
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
 }
 .form-label,
 .coment-label {
@@ -350,9 +366,9 @@ ul {
   line-height: 1.167;
   letter-spacing: 0.01em;
 }
-.form-input:focus + .form-label {
+/* .form-input:focus + .form-label {
   color: var(--accent-color);
-}
+} */
 .form-coment {
   position: relative;
   margin-bottom: 20px;
@@ -361,6 +377,7 @@ ul {
   height: 120px;
   resize: none;
   padding: 12px 16px;
+  transition: border var(--time) var(--animation-function);
 }
 .coment-field::placeholder {
   font-weight: normal;
@@ -370,13 +387,53 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 .form-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
+.input-checkbox {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .label-checkbox {
+  display: inline-block;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-left: 30px;
+}
+.label-checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.input-checkbox:checked + .label-checkbox::after {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-position: center;
+  background-origin: border-boх;
 }
 .link-consent {
   margin-top: 0;
@@ -388,6 +445,12 @@ ul {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  transition: box-shadow var(--time) var(--animation-function);
+}
+.modal-button:hover,
+.modal-button:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 /* Особенности */
 .features {
@@ -800,6 +863,7 @@ ul {
 
   align-items: center;
   justify-content: center;
+  transition: box-shadow var(--time) var(--animation-function);
 }
 .mailing-input {
   margin-right: 10px;
@@ -807,6 +871,11 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
+  transition: box-shadow var(--time) var(--animation-function);
+}
+.mailing-input:focus,
+.button-mailing:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .mailing-label {
   position: absolute;
