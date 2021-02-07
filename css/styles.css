@@ -409,12 +409,12 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-left: 30px;
+  margin-left: 35px;
 }
 .label-checkbox::after {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 13px;
   transform: translateY(-50%);
   content: "";
   display: inline-block;
@@ -424,16 +424,16 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  margin-left: 8px;
+  transition: all var(--time) var(--animation-function);
 }
 
 .input-checkbox:checked + .label-checkbox::after {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
-  background-image: url(../images/icon-check.svg);
+  background-image: url(../images/icon-check3.svg);
   background-size: contain;
   background-position: center;
-  background-origin: border-boх;
+  background-origin: border-box;
 }
 .link-consent {
   margin-top: 0;
