@@ -871,7 +871,7 @@ ul {
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
-  border-radius: 4px;
+  border-radius: 2px;
   transition: all var(--time) var(--animation-function);
 }
 
@@ -884,9 +884,12 @@ ul {
   background-origin: border-box;
 }
 
-.input-checkbox:focus + .label-checkbox::after {
+.input-checkbox:checked:focus + .label-checkbox::after {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.input-checkbox:focus:not(:checked) + .label-checkbox::after {
+  border-color: var(--accent-color);
 }
 .link-consent {
   margin-top: 0;
